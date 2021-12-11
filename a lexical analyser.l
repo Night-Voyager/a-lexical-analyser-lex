@@ -8,6 +8,7 @@ octal_int       0[0-7]+
 decimal_int     (0|[1-9][0-9]*)(u|U|l|L|ul|UL)?
 hexadecimal_int 0x[0-9a-fA-F]*
 float           [0-9]*(\.[0-9]*)?([eE][\+\-]?[0-9]+)?
+space           [ \f\r\t\n]
 
 %%
 
@@ -29,6 +30,7 @@ float           [0-9]*(\.[0-9]*)?([eE][\+\-]?[0-9]+)?
 {float} {
     printf("<float, %s>\n", yytext);
 }
+{space} { /*do nothing*/ }
 
 %%
 
