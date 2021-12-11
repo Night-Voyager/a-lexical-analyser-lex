@@ -8,6 +8,8 @@ octal_int       0[0-7]+
 decimal_int     (0|[1-9][0-9]*)(u|U|l|L|ul|UL)?
 hexadecimal_int 0x[0-9a-fA-F]*
 float           [0-9]*(\.[0-9]*)?([eE][\+\-]?[0-9]+)?
+char            '\\?.'
+string          \".*\"
 space           [ \f\r\t\n]
 single_line_comment \/\/.*
 multi-line_comment  \/\*(.|\n)*\*\/
@@ -31,6 +33,12 @@ multi-line_comment  \/\*(.|\n)*\*\/
 }
 {float} {
     printf("<float, %s>\n", yytext);
+}
+{char} {
+    printf("<char, %s>\n", yytext);
+}
+{string} {
+    printf("<string, %s>\n", yytext);
 }
 {space} { /*do nothing*/ }
 {single_line_comment} { /*do nothing*/ }
