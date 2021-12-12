@@ -15,6 +15,7 @@ string          \".*\"
 space           [ \f\r\t\n]
 single_line_comment \/\/.*
 multi-line_comment  \/\*(.|\n)*\*\/
+empty_char      ''
 else            .
 
 %%
@@ -46,6 +47,7 @@ else            .
 {space} { /*do nothing*/ }
 {single_line_comment} { /*do nothing*/ }
 {multi-line_comment} { /*do nothing*/ }
+{empty_char} |
 {else} {
     printf("line %d: unidentified token: %s\n", yylineno, yytext);
 }
