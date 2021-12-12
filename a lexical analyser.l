@@ -7,7 +7,7 @@
 keyword         auto|break|case|char|const|continue|default|do|double|else|enum|extern|float|for|goto|if|int|long|register|return|short|signed|sizeof|static|struct|switch|typeof|union|unsigned|void|volatile|while|_Bool|_Complex|_Imaginary|inline|restrict|_Alignas|_Alignof|_Atomic|_Generic|_Noreturn|_Static_assert|_Thread_local
 identifier      [_a-zA-Z][_a-zA-Z0-9]*
 octal_int       0[0-7]+
-decimal_int     (0|[1-9][0-9]*)(u|U|l|L|ul|UL)?
+decimal_int     [0-9]*(u|U|l|L|ul|UL)?
 hexadecimal_int 0x[0-9a-fA-F]*
 float           [0-9]*(\.[0-9]*)?([eE][\+\-]?[0-9]+)?
 char            '\\?.'
