@@ -14,6 +14,8 @@ float           [0-9]*(\.[0-9]*)?([eE][\+\-]?[0-9]+)?(l|L)?
 char            '\\?.'
 string          \".*\"
 operator        \+|-|\*|\/|%|\+\+|--|==|!=|>|<|>=|<=|&&|\|\||!|&|\||\^|~|<<|>>|=|\+=|-=|\*=|\/=|%=|<<=|>>=|&=|\^=|\|=|\?
+delimiter       ,|;|:|\(|\)|\[|\]|\{|\}
+punctuation     #|\$|@|`
 space           [ \f\r\t\n]
 single_line_comment \/\/.*
 multi-line_comment  \/\*(.|\n)*\*\/
@@ -51,6 +53,12 @@ else            .
 }
 {operator} {
     printf("<operator, %s >\n", yytext);
+}
+{delimiter} {
+    printf("<delimiter, %s >\n", yytext);
+}
+{punctuation} {
+    printf("<punctuation, %s >\n", yytext);
 }
 {space} { /*do nothing*/ }
 {single_line_comment} { /*do nothing*/ }
