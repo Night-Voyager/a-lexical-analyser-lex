@@ -13,6 +13,7 @@ hexadecimal_int 0[xX][0-9a-fA-F]*(u|U|l|L|ul|UL)?
 float           [0-9]*(\.[0-9]*)?([eE][\+\-]?[0-9]+)?(l|L)?
 char            '\\?.'
 string          \".*\"
+operator        \+|-|\*|\/|%|\+\+|--|==|!=|>|<|>=|<=|&&|\|\||!|&|\||\^|~|<<|>>|=|\+=|-=|\*=|\/=|%=|<<=|>>=|&=|\^=|\|=|\?
 space           [ \f\r\t\n]
 single_line_comment \/\/.*
 multi-line_comment  \/\*(.|\n)*\*\/
@@ -47,6 +48,9 @@ else            .
 }
 {string} {
     printf("<string, %s>\n", yytext);
+}
+{operator} {
+    printf("<operator, %s >\n", yytext);
 }
 {space} { /*do nothing*/ }
 {single_line_comment} { /*do nothing*/ }
