@@ -32,7 +32,7 @@ else                .
     printf("<identifier, %s>\n", yytext);
 }
 {preprocessor} {
-    printf("<preprocessor directive, %s>\n", yytext);
+    printf("<preprocessor_directive, %s>\n", yytext);
 }
 {standard_library} {
     printf("<standard_library, %s>\n", yytext);
@@ -64,8 +64,8 @@ else                .
 {punctuation} {
     printf("<punctuation, %s >\n", yytext);
 }
-{space} { /*do nothing*/ }
-{single_line_comment} { /*do nothing*/ }
+{space} |
+{single_line_comment} |
 {multi-line_comment} { /*do nothing*/ }
 {empty_char} |
 {else} {

@@ -728,7 +728,7 @@ static const flex_int16_t yy_chk[684] =
 /* Table of booleans, true if rule could match eol. */
 static const flex_int32_t yy_rule_can_match_eol[20] =
     {   0,
-0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 
         };
 
 static yy_state_type yy_last_accepting_state;
@@ -1054,7 +1054,7 @@ case 3:
 YY_RULE_SETUP
 #line 34 "a lexical analyser.l"
 {
-    printf("<preprocessor directive, %s>\n", yytext);
+    printf("<preprocessor_directive, %s>\n", yytext);
 }
 	YY_BREAK
 case 4:
@@ -1129,15 +1129,10 @@ YY_RULE_SETUP
 	YY_BREAK
 case 14:
 /* rule 14 can match eol */
-YY_RULE_SETUP
-#line 67 "a lexical analyser.l"
-{ /*do nothing*/ }
-	YY_BREAK
-case 15:
-YY_RULE_SETUP
 #line 68 "a lexical analyser.l"
-{ /*do nothing*/ }
-	YY_BREAK
+case 15:
+/* rule 15 can match eol */
+#line 69 "a lexical analyser.l"
 case 16:
 /* rule 16 can match eol */
 YY_RULE_SETUP
@@ -1158,7 +1153,7 @@ YY_RULE_SETUP
 #line 75 "a lexical analyser.l"
 ECHO;
 	YY_BREAK
-#line 1162 "lex.yy.c"
+#line 1157 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
