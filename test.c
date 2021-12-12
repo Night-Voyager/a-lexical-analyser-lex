@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int main() {
 	// single line comment
 	char c = '';
