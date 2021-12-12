@@ -8,7 +8,7 @@ keyword         auto|break|case|char|const|continue|default|do|double|else|enum|
 identifier      [_a-zA-Z][_a-zA-Z0-9]*
 octal_int       0[0-7]+
 decimal_int     [0-9]*(u|U|l|L|ul|UL)?
-hexadecimal_int 0x[0-9a-fA-F]*
+hexadecimal_int 0[xX][0-9a-fA-F]*
 float           [0-9]*(\.[0-9]*)?([eE][\+\-]?[0-9]+)?
 char            '\\?.'
 string          \".*\"
