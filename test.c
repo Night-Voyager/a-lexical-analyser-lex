@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+void test(const char *, ...);
+
 int main() {
 	// single line comment
 	char c = '';

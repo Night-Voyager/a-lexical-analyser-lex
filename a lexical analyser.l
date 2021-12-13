@@ -16,7 +16,7 @@ char                '\\?.'
 string              \".*\"
 operator            \+|-|\*|\/|%|\+\+|--|==|!=|>|<|>=|<=|&&|\|\||!|&|\||\^|~|<<|>>|=|\+=|-=|\*=|\/=|%=|<<=|>>=|&=|\^=|\|=|\?
 delimiter           ,|;|:|\(|\)|\[|\]|\{|\}
-punctuation         #|\$|@|`
+punctuation         #|\$|@|`|\.\.\.
 space               [ \f\r\t\n]
 single_line_comment \/\/.*
 multi-line_comment  \/\*(.|\n)*\*\/
